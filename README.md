@@ -1,2 +1,3 @@
-# freds-kitchen
+![alt text](https://github.com/Shahid4183/freds-kitchen/blob/test/public/assest/images/freds-kitchen-logo.png)
+# _Fred's Kitchen_
 This is Fred. He makes lip smacking hamburgers and fries in the town. People are crazy about the food at this local restaurant named Fred’s Kitchen. It has been two decades since Fred is doing this and lately he has been feeling that he should catch on the eCommerce wave and make his burgers, fries a sensation whilst facilitating free home delivery.
