@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import Header from '../components/header/header'
-import './app.css'
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
+import './app.css'
+import Menu from '../components/menu/menu'
+
+import {connect} from 'react-redux'
+import { GetMenuList } from '../actions/index'
+import { bindActionCreators } from 'redux';
 
 class App extends Component {
+
+    componentWillMount(){
+        this.props.GetMenuList()
+    }
+
     render() {
+        console.log(this.props)
         return (
             <div className="main">
                 <Header/>
                 <div className="container">
                     <div >
                         <div className="poster">
-                            <img src="images/logo.png" width="250px" height="250px"/>
+                            <img src="images/logo.png" alt="" width="250px" height="250px"/>
                             <Typography variant="caption">
                                 Welcome to
                             </Typography>
@@ -39,65 +45,22 @@ class App extends Component {
                             </p>
                         </Typography>
                         </div>
-                        <div className="menu">
-                            <Grid container className="menuRoot" spacing={2} xs="12">
-                                <Grid>
-                                    <Card>
-                                        <CardContent>
-                                            This is card content
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button>Add to Cart</Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid> 
-                                <Grid>
-                                    <Card>
-                                        <CardContent>
-                                            This is card content
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button>Add to Cart</Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid> 
-                                <Grid>
-                                    <Card>
-                                        <CardContent>
-                                            This is card content
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button>Add to Cart</Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid> 
-                                <Grid>
-                                    <Card>
-                                        <CardContent>
-                                            This is card content
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button>Add to Cart</Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid> 
-                                <Grid>
-                                    <Card>
-                                        <CardContent>
-                                            This is card content
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button>Add to Cart</Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid> 
-                            </Grid>
-                        </div>
+                        {this.props.menuList?
+                        <Menu menu={this.props.menuList?this.props.menuList.menu:null}/>
+                        :<div>No Menu Found</div>
+                        }
                     </div>
                 </div>                   
             </div>
         );
     }
 }
-
-export default App;
+const mapStateToProps = (state)=>{
+    return{
+        menuList:state.menu
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ GetMenuList }, dispatch)
+}
+export default connect(mapStateToProps,mapDispatchToProps)(App);

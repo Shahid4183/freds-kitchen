@@ -1,0 +1,11 @@
+.menu{
+    margin: 10px;
+}
+.menuRoot{
+    flex-grow: 1;
+}
+.cardHolder{
+    padding: 10px !important;
+    height: 200px;
+    widows: 400px;
+}

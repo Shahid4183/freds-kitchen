@@ -1,0 +1,28 @@
+{
+    "menu":[
+            {
+                "title":"Hamburger",
+                "description":"Fresh crispy bun , lettuce leaves , pickles , onion and a small patty flavored with mayonnaise and ketchup — this is a classic portrait of a burger , the most common fast food in the Pune, from which daily poisoning in hospital beds are tens of thousands of Punekars",
+                "image":"images/hamburger.png",
+                "price":85
+            },
+            {
+                "title":"Fries",
+                "description":"Finger Chips are thin strips of potato that are either fried or baked. They’re consumed worldwide as facet dishes with alimentation or as snacks. Within the Forties, freshly cut potatoes were for the most part replaced by frozen finger chips as they were convenient and offered consistent quality and style.",
+                "image":"images/fries.png",
+                "price":50
+            },
+            {
+                "title":"Pepsi",
+                "description":"Pepsi drink 450ML bottle",
+                "image":"images/pepsi.png",
+                "price":40
+            },
+            {
+                "title":"Coke",
+                "description":"Coca Cola drink 450ML bottle",
+                "image":"images/coke.png",
+                "price":40
+            }
+        ]
+}
