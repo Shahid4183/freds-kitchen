@@ -1,0 +1,15 @@
+.headerMain{
+    background-color:#C70039!important;
+}
+.typo{
+    flex-grow: 1;
+}
+.cartCount{
+    background: white;
+    color: #C70039;
+    width: 15px;
+    border-radius: 50%;
+    height: 15px;
+    margin-left: 2px;
+    font-size: 10px;
+}
