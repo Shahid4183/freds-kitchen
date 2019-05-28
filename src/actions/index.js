@@ -14,3 +14,10 @@ export function GetMenuList(){
         payload:response
     }
 }
+
+export function AddToCart(data) {	
+	return {
+		type: "ADD_TO_CART",
+		payload: data
+	}
+}

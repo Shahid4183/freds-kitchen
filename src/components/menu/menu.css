@@ -5,7 +5,14 @@
     flex-grow: 1;
 }
 .cardHolder{
-    padding: 10px !important;
-    height: 200px;
-    widows: 400px;
+    padding: 10px !important;    
+}
+.contentHolder{
+    word-wrap: break-word;
+}
+.mediaHolder{
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+    max-height: 125px;
+    transition: transform .7s;
 }

@@ -4,18 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import './app.css'
 import Menu from '../components/menu/menu'
 
-import {connect} from 'react-redux'
-import { GetMenuList } from '../actions/index'
-import { bindActionCreators } from 'redux';
-
 class App extends Component {
 
-    componentWillMount(){
-        this.props.GetMenuList()
-    }
-
-    render() {
-        console.log(this.props)
+    render() {        
         return (
             <div className="main">
                 <Header/>
@@ -45,22 +36,11 @@ class App extends Component {
                             </p>
                         </Typography>
                         </div>
-                        {this.props.menuList?
-                        <Menu menu={this.props.menuList?this.props.menuList.menu:null}/>
-                        :<div>No Menu Found</div>
-                        }
+                        <Menu/>
                     </div>
                 </div>                   
             </div>
         );
     }
 }
-const mapStateToProps = (state)=>{
-    return{
-        menuList:state.menu
-    }
-}
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ GetMenuList }, dispatch)
-}
-export default connect(mapStateToProps,mapDispatchToProps)(App);
+export default App;
